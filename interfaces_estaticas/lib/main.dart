@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'pantalla_inicio.dart'; // Importa las pantallas
-// import 'pantalla_perfil.dart';
-// import 'pantalla_hobbies.dart';
 
 void main() {
   runApp(const MyApp());

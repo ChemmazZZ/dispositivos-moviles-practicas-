@@ -77,7 +77,7 @@ class PantallaHobbies extends StatelessWidget {
           Container( // Usa Container [cite: 4]
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.2),
+              color: color.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, color: color, size: 35), // Usa Icon [cite: 20]
@@ -88,7 +88,7 @@ class PantallaHobbies extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  title, // Título del hobby [cite: 33]
+                  title, // Título del hobby [cite: 33] 
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 5),

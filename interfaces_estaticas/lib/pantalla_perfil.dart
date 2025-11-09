@@ -51,7 +51,7 @@ class PantallaPerfil extends StatelessWidget {
               const SizedBox(height: 30), // Usa SizedBox [cite: 32]
               
               const Text( // Tu nombre [cite: 14, 33]
-                'Mi Nombre de Ejemplo',
+                'José Maria Mamani Zuñiga',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
@@ -70,14 +70,14 @@ class PantallaPerfil extends StatelessWidget {
               const SizedBox(height: 15),
 
               _buildContactRow(
-                icon: Icons.email, 
-                text: 'ejemplo@miuniversidad.edu',
+                icon: Icons.email,
+                text: 'jmamaniz@ulasalle.edu.pe',
                 color: Colors.redAccent,
               ),
 
               _buildContactRow(
-                icon: Icons.phone, 
-                text: '+52 123 456 7890',
+                icon: Icons.phone,
+                text: '+51 987558263',
                 color: Colors.green,
               ),
             ],

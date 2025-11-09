@@ -1,6 +1,7 @@
 // lib/pantalla_inicio.dart
 
 import 'package:flutter/material.dart';
+import 'pantalla_perfil.dart';
 
 class PantallaInicio extends StatelessWidget {
   const PantallaInicio({super.key});
@@ -18,7 +19,7 @@ class PantallaInicio extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const Text( // Usa Text [cite: 31]
-              '¡Hola! Bienvenido a tu aplicación personal.', // Texto de bienvenida [cite: 10, 33]
+              '¡Hola! Bienvenido a mi aplicación personal.', // Texto de bienvenida [cite: 10, 33]
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
@@ -29,13 +30,16 @@ class PantallaInicio extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 20.0), // Usa Padding [cite: 32]
               child: Text(
-                'Aquí podrás ver tu perfil y tus intereses.',
+                'Aquí podrás ver mi perfil y mis intereses.',
                 style: TextStyle(fontSize: 16),
               ),
             ),
             ElevatedButton( // Usa un botón (aunque no funcione aún) [cite: 11]
               onPressed: () {
-                // Lógica vacía, ya que no se necesita navegación [cite: 6]
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PantallaPerfil()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.tealAccent.shade700,
