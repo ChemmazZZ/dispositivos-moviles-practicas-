@@ -1,6 +1,9 @@
 // lib/main.dart
+
 import 'package:flutter/material.dart';
-import 'pantalla_inicio.dart'; // Asegúrate de importar tus archivos
+import 'pantalla_inicio.dart'; // Importa las pantallas
+// import 'pantalla_perfil.dart';
+// import 'pantalla_hobbies.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mi App Personal',
-      // Cambia el widget home para probar las diferentes pantallas
-      home: PantallaInicio(), // Cambiar por PantallaPerfil() o PantallaHobbies() [cite: 165]
+      title: 'Mi App Personal', // Título de la aplicación [cite: 48]
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey, // Color base de la aplicación
+      ),
+      // Cambia 'PantallaInicio()' por 'PantallaPerfil()' o 'PantallaHobbies()' para probar [cite: 28, 49]
+      home: const PantallaInicio(), 
     );
   }
 }
