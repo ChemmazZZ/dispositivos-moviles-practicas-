@@ -11,5 +11,16 @@ class UserViewModel extends ChangeNotifier {
   void agregarUsuario(User usuario) {
   _usuarios.add(usuario);
   notifyListeners(); // Notifica a los listeners
-}
+  }
+  
+  void eliminarUsuario(int index) {
+    _usuarios.removeAt(index);
+    notifyListeners(); // Notifica a los listeners
+  }
+
+  void editarUsuario(int index, User usuario) {
+  _usuarios[index] = usuario;
+  notifyListeners(); // tambien notifica a los listeners
+  }
+
 }
