@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; // Importar
-import 'viewmodels/user_view_model.dart'; // Importar
-import 'views/user_list_screen.dart'; // Importar
+import 'package:provider/provider.dart';
+import 'viewmodels/user_view_model.dart';
+import 'views/user_list_screen.dart';
 
 void main() {
   runApp(
-    // Envuelve la app con el Provider
+    // 1. Envuelve la app con el Provider
     ChangeNotifierProvider(
-      create: (context) => UserViewModel(), // Crea la instancia
+      // 2. Crea la instancia del ViewModel que manejará el estado
+      create: (context) => UserViewModel(),
       child: const MyApp(),
     ),
   );
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gestión de Usuarios',
       theme: ThemeData(primarySwatch: Colors.indigo),
-      home: const UserListScreen(), // Actualizar home
+      // 3. El home de la app es la pantalla que lista los usuarios
+      home: const UserListScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
