@@ -13,7 +13,6 @@ class UserFormScreen extends StatefulWidget {
 }
 
 class _UserFormScreenState extends State<UserFormScreen> {
-  // --- INICIO DEL CÓDIGO AÑADIDO EN COMMIT 12 ---
 
   // Clave global para identificar y validar el formulario
   final _formKey = GlobalKey<FormState>();
