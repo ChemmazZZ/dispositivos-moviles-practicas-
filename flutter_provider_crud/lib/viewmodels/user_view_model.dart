@@ -8,4 +8,8 @@ class UserViewModel extends ChangeNotifier {
   // Getter público
   List<User> get usuarios => _usuarios;
   
+  void agregarUsuario(User usuario) {
+  _usuarios.add(usuario);
+  notifyListeners(); // Notifica a los listeners
+}
 }
