@@ -5,9 +5,9 @@ import 'views/user_list_screen.dart';
 
 void main() {
   runApp(
-    // 1. Envuelve la app con el Provider
+    // Envuelve la aplicación con el Provider para que el ViewModel
+    // esté disponible en todo el árbol de widgets.
     ChangeNotifierProvider(
-      // 2. Crea la instancia del ViewModel que manejará el estado
       create: (context) => UserViewModel(),
       child: const MyApp(),
     ),
@@ -22,8 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gestión de Usuarios',
       theme: ThemeData(primarySwatch: Colors.indigo),
-      // 3. El home de la app es la pantalla que lista los usuarios
-      home: const UserListScreen(),
+      home: const UserListScreen(), // La pantalla principal es la lista
       debugShowCheckedModeBanner: false,
     );
   }
